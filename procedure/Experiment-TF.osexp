@@ -1,0 +1,1581 @@
+---
+API: 2.1
+OpenSesame: 3.2.4
+Platform: posix
+---
+set width 1680
+set uniform_coordinates no
+set transparent_variables no
+set title "mousetracking operator preview effect"
+set synth_backend legacy
+set subject_parity even
+set subject_nr 0
+set start experiment
+set sound_sample_size -16
+set sound_freq 48000
+set sound_channels 2
+set sound_buf_size 1024
+set sampler_backend legacy
+set round_decimals 2
+set mouse_backend legacy
+set keyboard_backend legacy
+set height 1050
+set fullscreen no
+set form_clicks no
+set foreground black
+set font_underline no
+set font_size 24
+set font_italic no
+set font_family mono
+set font_bold no
+set experiment_path "/Users/tom/Desktop/opPreviewExperiment/procedure"
+set disable_garbage_collection yes
+set description "A simple template for the mouse-tracking paradigm"
+set custom_cursor no
+set coordinates relative
+set compensation 0
+set color_backend legacy
+set clock_backend legacy
+set canvas_backend legacy
+set bidi no
+set background white
+
+define sequence block1_sequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run keyboard_script always
+	run logger always
+
+define sequence block2_sequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run keyboard_script always
+	run logger always
+
+define loop block_1
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item block1_sequence
+	set description "Repeatedly runs another item"
+	set cycles 128
+	set continuous no
+	set column_order "stimulus;truth;SOAcondition;operation;size"
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 stimulus "2_7_add_FI.jpg"
+	setcycle 0 SOAcondition neutral
+	setcycle 0 operation add
+	setcycle 0 truth false
+	setcycle 0 size small
+	setcycle 1 stimulus "2_7_add_FNI.jpg"
+	setcycle 1 SOAcondition neutral
+	setcycle 1 operation add
+	setcycle 1 truth false
+	setcycle 1 size small
+	setcycle 2 stimulus "2_7_add_true.jpg"
+	setcycle 2 SOAcondition neutral
+	setcycle 2 operation add
+	setcycle 2 truth true
+	setcycle 2 size small
+	setcycle 3 stimulus "2_7_add_true.jpg"
+	setcycle 3 SOAcondition neutral
+	setcycle 3 operation add
+	setcycle 3 truth true
+	setcycle 3 size small
+	setcycle 4 stimulus "2_7_mult_FI.jpg"
+	setcycle 4 SOAcondition neutral
+	setcycle 4 operation mult
+	setcycle 4 truth false
+	setcycle 4 size small
+	setcycle 5 stimulus "2_7_mult_FNI.jpg"
+	setcycle 5 SOAcondition neutral
+	setcycle 5 operation mult
+	setcycle 5 truth false
+	setcycle 5 size small
+	setcycle 6 stimulus "2_7_mult_true.jpg"
+	setcycle 6 SOAcondition neutral
+	setcycle 6 operation mult
+	setcycle 6 truth true
+	setcycle 6 size small
+	setcycle 7 stimulus "2_7_mult_true.jpg"
+	setcycle 7 SOAcondition neutral
+	setcycle 7 operation mult
+	setcycle 7 truth true
+	setcycle 7 size small
+	setcycle 8 stimulus "3_6_add_FI.jpg"
+	setcycle 8 SOAcondition neutral
+	setcycle 8 operation add
+	setcycle 8 truth false
+	setcycle 8 size small
+	setcycle 9 stimulus "3_6_add_FNI.jpg"
+	setcycle 9 SOAcondition neutral
+	setcycle 9 operation add
+	setcycle 9 truth false
+	setcycle 9 size small
+	setcycle 10 stimulus "3_6_add_true.jpg"
+	setcycle 10 SOAcondition neutral
+	setcycle 10 operation add
+	setcycle 10 truth true
+	setcycle 10 size small
+	setcycle 11 stimulus "3_6_add_true.jpg"
+	setcycle 11 SOAcondition neutral
+	setcycle 11 operation add
+	setcycle 11 truth true
+	setcycle 11 size small
+	setcycle 12 stimulus "3_6_mult_FI.jpg"
+	setcycle 12 SOAcondition neutral
+	setcycle 12 operation mult
+	setcycle 12 truth false
+	setcycle 12 size small
+	setcycle 13 stimulus "3_6_mult_FNI.jpg"
+	setcycle 13 SOAcondition neutral
+	setcycle 13 operation mult
+	setcycle 13 truth false
+	setcycle 13 size small
+	setcycle 14 stimulus "3_6_mult_true.jpg"
+	setcycle 14 SOAcondition neutral
+	setcycle 14 operation mult
+	setcycle 14 truth true
+	setcycle 14 size small
+	setcycle 15 stimulus "3_6_mult_true.jpg"
+	setcycle 15 SOAcondition neutral
+	setcycle 15 operation mult
+	setcycle 15 truth true
+	setcycle 15 size small
+	setcycle 16 stimulus "4_9_add_FI.jpg"
+	setcycle 16 SOAcondition neutral
+	setcycle 16 operation add
+	setcycle 16 truth false
+	setcycle 16 size large
+	setcycle 17 stimulus "4_9_add_FNI.jpg"
+	setcycle 17 SOAcondition neutral
+	setcycle 17 operation add
+	setcycle 17 truth false
+	setcycle 17 size large
+	setcycle 18 stimulus "4_9_add_true.jpg"
+	setcycle 18 SOAcondition neutral
+	setcycle 18 operation add
+	setcycle 18 truth true
+	setcycle 18 size large
+	setcycle 19 stimulus "4_9_add_true.jpg"
+	setcycle 19 SOAcondition neutral
+	setcycle 19 operation add
+	setcycle 19 truth true
+	setcycle 19 size large
+	setcycle 20 stimulus "4_9_mult_FI.jpg"
+	setcycle 20 SOAcondition neutral
+	setcycle 20 operation mult
+	setcycle 20 truth false
+	setcycle 20 size large
+	setcycle 21 stimulus "4_9_mult_FNI.jpg"
+	setcycle 21 SOAcondition neutral
+	setcycle 21 operation mult
+	setcycle 21 truth false
+	setcycle 21 size large
+	setcycle 22 stimulus "4_9_mult_true.jpg"
+	setcycle 22 SOAcondition neutral
+	setcycle 22 operation mult
+	setcycle 22 truth true
+	setcycle 22 size large
+	setcycle 23 stimulus "4_9_mult_true.jpg"
+	setcycle 23 SOAcondition neutral
+	setcycle 23 operation mult
+	setcycle 23 truth true
+	setcycle 23 size large
+	setcycle 24 stimulus "5_3_add_FI.jpg"
+	setcycle 24 SOAcondition neutral
+	setcycle 24 operation add
+	setcycle 24 truth false
+	setcycle 24 size small
+	setcycle 25 stimulus "5_3_add_FNI.jpg"
+	setcycle 25 SOAcondition neutral
+	setcycle 25 operation add
+	setcycle 25 truth false
+	setcycle 25 size small
+	setcycle 26 stimulus "5_3_add_true.jpg"
+	setcycle 26 SOAcondition neutral
+	setcycle 26 operation add
+	setcycle 26 truth true
+	setcycle 26 size small
+	setcycle 27 stimulus "5_3_add_true.jpg"
+	setcycle 27 SOAcondition neutral
+	setcycle 27 operation add
+	setcycle 27 truth true
+	setcycle 27 size small
+	setcycle 28 stimulus "5_3_mult_FI.jpg"
+	setcycle 28 SOAcondition neutral
+	setcycle 28 operation mult
+	setcycle 28 truth false
+	setcycle 28 size small
+	setcycle 29 stimulus "5_3_mult_FNI.jpg"
+	setcycle 29 SOAcondition neutral
+	setcycle 29 operation mult
+	setcycle 29 truth false
+	setcycle 29 size small
+	setcycle 30 stimulus "5_3_mult_true.jpg"
+	setcycle 30 SOAcondition neutral
+	setcycle 30 operation mult
+	setcycle 30 truth true
+	setcycle 30 size small
+	setcycle 31 stimulus "5_3_mult_true.jpg"
+	setcycle 31 SOAcondition neutral
+	setcycle 31 operation mult
+	setcycle 31 truth true
+	setcycle 31 size small
+	setcycle 32 stimulus "6_8_add_FI.jpg"
+	setcycle 32 SOAcondition neutral
+	setcycle 32 operation add
+	setcycle 32 truth false
+	setcycle 32 size large
+	setcycle 33 stimulus "6_8_add_FNI.jpg"
+	setcycle 33 SOAcondition neutral
+	setcycle 33 operation add
+	setcycle 33 truth false
+	setcycle 33 size large
+	setcycle 34 stimulus "6_8_add_true.jpg"
+	setcycle 34 SOAcondition neutral
+	setcycle 34 operation add
+	setcycle 34 truth true
+	setcycle 34 size large
+	setcycle 35 stimulus "6_8_add_true.jpg"
+	setcycle 35 SOAcondition neutral
+	setcycle 35 operation add
+	setcycle 35 truth true
+	setcycle 35 size large
+	setcycle 36 stimulus "6_8_mult_FI.jpg"
+	setcycle 36 SOAcondition neutral
+	setcycle 36 operation mult
+	setcycle 36 truth false
+	setcycle 36 size large
+	setcycle 37 stimulus "6_8_mult_FNI.jpg"
+	setcycle 37 SOAcondition neutral
+	setcycle 37 operation mult
+	setcycle 37 truth false
+	setcycle 37 size large
+	setcycle 38 stimulus "6_8_mult_true.jpg"
+	setcycle 38 SOAcondition neutral
+	setcycle 38 operation mult
+	setcycle 38 truth true
+	setcycle 38 size large
+	setcycle 39 stimulus "6_8_mult_true.jpg"
+	setcycle 39 SOAcondition neutral
+	setcycle 39 operation mult
+	setcycle 39 truth true
+	setcycle 39 size large
+	setcycle 40 stimulus "8_2_add_FI.jpg"
+	setcycle 40 SOAcondition neutral
+	setcycle 40 operation add
+	setcycle 40 truth false
+	setcycle 40 size small
+	setcycle 41 stimulus "8_2_add_FNI.jpg"
+	setcycle 41 SOAcondition neutral
+	setcycle 41 operation add
+	setcycle 41 truth false
+	setcycle 41 size small
+	setcycle 42 stimulus "8_2_add_true.jpg"
+	setcycle 42 SOAcondition neutral
+	setcycle 42 operation add
+	setcycle 42 truth true
+	setcycle 42 size small
+	setcycle 43 stimulus "8_2_add_true.jpg"
+	setcycle 43 SOAcondition neutral
+	setcycle 43 operation add
+	setcycle 43 truth true
+	setcycle 43 size small
+	setcycle 44 stimulus "8_2_mult_FI.jpg"
+	setcycle 44 SOAcondition neutral
+	setcycle 44 operation mult
+	setcycle 44 truth false
+	setcycle 44 size small
+	setcycle 45 stimulus "8_2_mult_FNI.jpg"
+	setcycle 45 SOAcondition neutral
+	setcycle 45 operation mult
+	setcycle 45 truth false
+	setcycle 45 size small
+	setcycle 46 stimulus "8_2_mult_true.jpg"
+	setcycle 46 SOAcondition neutral
+	setcycle 46 operation mult
+	setcycle 46 truth true
+	setcycle 46 size small
+	setcycle 47 stimulus "8_2_mult_true.jpg"
+	setcycle 47 SOAcondition neutral
+	setcycle 47 operation mult
+	setcycle 47 truth true
+	setcycle 47 size small
+	setcycle 48 stimulus "8_4_add_FI.jpg"
+	setcycle 48 SOAcondition neutral
+	setcycle 48 operation add
+	setcycle 48 truth false
+	setcycle 48 size large
+	setcycle 49 stimulus "8_4_add_FNI.jpg"
+	setcycle 49 SOAcondition neutral
+	setcycle 49 operation add
+	setcycle 49 truth false
+	setcycle 49 size large
+	setcycle 50 stimulus "8_4_add_true.jpg"
+	setcycle 50 SOAcondition neutral
+	setcycle 50 operation add
+	setcycle 50 truth true
+	setcycle 50 size large
+	setcycle 51 stimulus "8_4_add_true.jpg"
+	setcycle 51 SOAcondition neutral
+	setcycle 51 operation add
+	setcycle 51 truth true
+	setcycle 51 size large
+	setcycle 52 stimulus "8_4_mult_FI.jpg"
+	setcycle 52 SOAcondition neutral
+	setcycle 52 operation mult
+	setcycle 52 truth false
+	setcycle 52 size large
+	setcycle 53 stimulus "8_4_mult_FNI.jpg"
+	setcycle 53 SOAcondition neutral
+	setcycle 53 operation mult
+	setcycle 53 truth false
+	setcycle 53 size large
+	setcycle 54 stimulus "8_4_mult_true.jpg"
+	setcycle 54 SOAcondition neutral
+	setcycle 54 operation mult
+	setcycle 54 truth true
+	setcycle 54 size large
+	setcycle 55 stimulus "8_4_mult_true.jpg"
+	setcycle 55 SOAcondition neutral
+	setcycle 55 operation mult
+	setcycle 55 truth true
+	setcycle 55 size large
+	setcycle 56 stimulus "9_7_add_FI.jpg"
+	setcycle 56 SOAcondition neutral
+	setcycle 56 operation add
+	setcycle 56 truth false
+	setcycle 56 size large
+	setcycle 57 stimulus "9_7_add_FNI.jpg"
+	setcycle 57 SOAcondition neutral
+	setcycle 57 operation add
+	setcycle 57 truth false
+	setcycle 57 size large
+	setcycle 58 stimulus "9_7_add_true.jpg"
+	setcycle 58 SOAcondition neutral
+	setcycle 58 operation add
+	setcycle 58 truth true
+	setcycle 58 size large
+	setcycle 59 stimulus "9_7_add_true.jpg"
+	setcycle 59 SOAcondition neutral
+	setcycle 59 operation add
+	setcycle 59 truth true
+	setcycle 59 size large
+	setcycle 60 stimulus "9_7_mult_FI.jpg"
+	setcycle 60 SOAcondition neutral
+	setcycle 60 operation mult
+	setcycle 60 truth false
+	setcycle 60 size large
+	setcycle 61 stimulus "9_7_mult_FNI.jpg"
+	setcycle 61 SOAcondition neutral
+	setcycle 61 operation mult
+	setcycle 61 truth false
+	setcycle 61 size large
+	setcycle 62 stimulus "9_7_mult_true.jpg"
+	setcycle 62 SOAcondition neutral
+	setcycle 62 operation mult
+	setcycle 62 truth true
+	setcycle 62 size large
+	setcycle 63 stimulus "9_7_mult_true.jpg"
+	setcycle 63 SOAcondition neutral
+	setcycle 63 operation mult
+	setcycle 63 truth true
+	setcycle 63 size large
+	setcycle 64 stimulus "2_7_add_FI.jpg"
+	setcycle 64 SOAcondition negative
+	setcycle 64 operation add
+	setcycle 64 truth false
+	setcycle 64 size small
+	setcycle 65 stimulus "2_7_add_FNI.jpg"
+	setcycle 65 SOAcondition negative
+	setcycle 65 operation add
+	setcycle 65 truth false
+	setcycle 65 size small
+	setcycle 66 stimulus "2_7_add_true.jpg"
+	setcycle 66 SOAcondition negative
+	setcycle 66 operation add
+	setcycle 66 truth true
+	setcycle 66 size small
+	setcycle 67 stimulus "2_7_add_true.jpg"
+	setcycle 67 SOAcondition negative
+	setcycle 67 operation add
+	setcycle 67 truth true
+	setcycle 67 size small
+	setcycle 68 stimulus "2_7_mult_FI.jpg"
+	setcycle 68 SOAcondition negative
+	setcycle 68 operation mult
+	setcycle 68 truth false
+	setcycle 68 size small
+	setcycle 69 stimulus "2_7_mult_FNI.jpg"
+	setcycle 69 SOAcondition negative
+	setcycle 69 operation mult
+	setcycle 69 truth false
+	setcycle 69 size small
+	setcycle 70 stimulus "2_7_mult_true.jpg"
+	setcycle 70 SOAcondition negative
+	setcycle 70 operation mult
+	setcycle 70 truth true
+	setcycle 70 size small
+	setcycle 71 stimulus "2_7_mult_true.jpg"
+	setcycle 71 SOAcondition negative
+	setcycle 71 operation mult
+	setcycle 71 truth true
+	setcycle 71 size small
+	setcycle 72 stimulus "3_6_add_FI.jpg"
+	setcycle 72 SOAcondition negative
+	setcycle 72 operation add
+	setcycle 72 truth false
+	setcycle 72 size small
+	setcycle 73 stimulus "3_6_add_FNI.jpg"
+	setcycle 73 SOAcondition negative
+	setcycle 73 operation add
+	setcycle 73 truth false
+	setcycle 73 size small
+	setcycle 74 stimulus "3_6_add_true.jpg"
+	setcycle 74 SOAcondition negative
+	setcycle 74 operation add
+	setcycle 74 truth true
+	setcycle 74 size small
+	setcycle 75 stimulus "3_6_add_true.jpg"
+	setcycle 75 SOAcondition negative
+	setcycle 75 operation add
+	setcycle 75 truth true
+	setcycle 75 size small
+	setcycle 76 stimulus "3_6_mult_FI.jpg"
+	setcycle 76 SOAcondition negative
+	setcycle 76 operation mult
+	setcycle 76 truth false
+	setcycle 76 size small
+	setcycle 77 stimulus "3_6_mult_FNI.jpg"
+	setcycle 77 SOAcondition negative
+	setcycle 77 operation mult
+	setcycle 77 truth false
+	setcycle 77 size small
+	setcycle 78 stimulus "3_6_mult_true.jpg"
+	setcycle 78 SOAcondition negative
+	setcycle 78 operation mult
+	setcycle 78 truth true
+	setcycle 78 size small
+	setcycle 79 stimulus "3_6_mult_true.jpg"
+	setcycle 79 SOAcondition negative
+	setcycle 79 operation mult
+	setcycle 79 truth true
+	setcycle 79 size small
+	setcycle 80 stimulus "4_9_add_FI.jpg"
+	setcycle 80 SOAcondition negative
+	setcycle 80 operation add
+	setcycle 80 truth false
+	setcycle 80 size large
+	setcycle 81 stimulus "4_9_add_FNI.jpg"
+	setcycle 81 SOAcondition negative
+	setcycle 81 operation add
+	setcycle 81 truth false
+	setcycle 81 size large
+	setcycle 82 stimulus "4_9_add_true.jpg"
+	setcycle 82 SOAcondition negative
+	setcycle 82 operation add
+	setcycle 82 truth true
+	setcycle 82 size large
+	setcycle 83 stimulus "4_9_add_true.jpg"
+	setcycle 83 SOAcondition negative
+	setcycle 83 operation add
+	setcycle 83 truth true
+	setcycle 83 size large
+	setcycle 84 stimulus "4_9_mult_FI.jpg"
+	setcycle 84 SOAcondition negative
+	setcycle 84 operation mult
+	setcycle 84 truth false
+	setcycle 84 size large
+	setcycle 85 stimulus "4_9_mult_FNI.jpg"
+	setcycle 85 SOAcondition negative
+	setcycle 85 operation mult
+	setcycle 85 truth false
+	setcycle 85 size large
+	setcycle 86 stimulus "4_9_mult_true.jpg"
+	setcycle 86 SOAcondition negative
+	setcycle 86 operation mult
+	setcycle 86 truth true
+	setcycle 86 size large
+	setcycle 87 stimulus "4_9_mult_true.jpg"
+	setcycle 87 SOAcondition negative
+	setcycle 87 operation mult
+	setcycle 87 truth true
+	setcycle 87 size large
+	setcycle 88 stimulus "5_3_add_FI.jpg"
+	setcycle 88 SOAcondition negative
+	setcycle 88 operation add
+	setcycle 88 truth false
+	setcycle 88 size small
+	setcycle 89 stimulus "5_3_add_FNI.jpg"
+	setcycle 89 SOAcondition negative
+	setcycle 89 operation add
+	setcycle 89 truth false
+	setcycle 89 size small
+	setcycle 90 stimulus "5_3_add_true.jpg"
+	setcycle 90 SOAcondition negative
+	setcycle 90 operation add
+	setcycle 90 truth true
+	setcycle 90 size small
+	setcycle 91 stimulus "5_3_add_true.jpg"
+	setcycle 91 SOAcondition negative
+	setcycle 91 operation add
+	setcycle 91 truth true
+	setcycle 91 size small
+	setcycle 92 stimulus "5_3_mult_FI.jpg"
+	setcycle 92 SOAcondition negative
+	setcycle 92 operation mult
+	setcycle 92 truth false
+	setcycle 92 size small
+	setcycle 93 stimulus "5_3_mult_FNI.jpg"
+	setcycle 93 SOAcondition negative
+	setcycle 93 operation mult
+	setcycle 93 truth false
+	setcycle 93 size small
+	setcycle 94 stimulus "5_3_mult_true.jpg"
+	setcycle 94 SOAcondition negative
+	setcycle 94 operation mult
+	setcycle 94 truth true
+	setcycle 94 size small
+	setcycle 95 stimulus "5_3_mult_true.jpg"
+	setcycle 95 SOAcondition negative
+	setcycle 95 operation mult
+	setcycle 95 truth true
+	setcycle 95 size small
+	setcycle 96 stimulus "6_8_add_FI.jpg"
+	setcycle 96 SOAcondition negative
+	setcycle 96 operation add
+	setcycle 96 truth false
+	setcycle 96 size large
+	setcycle 97 stimulus "6_8_add_FNI.jpg"
+	setcycle 97 SOAcondition negative
+	setcycle 97 operation add
+	setcycle 97 truth false
+	setcycle 97 size large
+	setcycle 98 stimulus "6_8_add_true.jpg"
+	setcycle 98 SOAcondition negative
+	setcycle 98 operation add
+	setcycle 98 truth true
+	setcycle 98 size large
+	setcycle 99 stimulus "6_8_add_true.jpg"
+	setcycle 99 SOAcondition negative
+	setcycle 99 operation add
+	setcycle 99 truth true
+	setcycle 99 size large
+	setcycle 100 stimulus "6_8_mult_FI.jpg"
+	setcycle 100 SOAcondition negative
+	setcycle 100 operation mult
+	setcycle 100 truth false
+	setcycle 100 size large
+	setcycle 101 stimulus "6_8_mult_FNI.jpg"
+	setcycle 101 SOAcondition negative
+	setcycle 101 operation mult
+	setcycle 101 truth false
+	setcycle 101 size large
+	setcycle 102 stimulus "6_8_mult_true.jpg"
+	setcycle 102 SOAcondition negative
+	setcycle 102 operation mult
+	setcycle 102 truth true
+	setcycle 102 size large
+	setcycle 103 stimulus "6_8_mult_true.jpg"
+	setcycle 103 SOAcondition negative
+	setcycle 103 operation mult
+	setcycle 103 truth true
+	setcycle 103 size large
+	setcycle 104 stimulus "8_2_add_FI.jpg"
+	setcycle 104 SOAcondition negative
+	setcycle 104 operation add
+	setcycle 104 truth false
+	setcycle 104 size small
+	setcycle 105 stimulus "8_2_add_FNI.jpg"
+	setcycle 105 SOAcondition negative
+	setcycle 105 operation add
+	setcycle 105 truth false
+	setcycle 105 size small
+	setcycle 106 stimulus "8_2_add_true.jpg"
+	setcycle 106 SOAcondition negative
+	setcycle 106 operation add
+	setcycle 106 truth true
+	setcycle 106 size small
+	setcycle 107 stimulus "8_2_add_true.jpg"
+	setcycle 107 SOAcondition negative
+	setcycle 107 operation add
+	setcycle 107 truth true
+	setcycle 107 size small
+	setcycle 108 stimulus "8_2_mult_FI.jpg"
+	setcycle 108 SOAcondition negative
+	setcycle 108 operation mult
+	setcycle 108 truth false
+	setcycle 108 size small
+	setcycle 109 stimulus "8_2_mult_FNI.jpg"
+	setcycle 109 SOAcondition negative
+	setcycle 109 operation mult
+	setcycle 109 truth false
+	setcycle 109 size small
+	setcycle 110 stimulus "8_2_mult_true.jpg"
+	setcycle 110 SOAcondition negative
+	setcycle 110 operation mult
+	setcycle 110 truth true
+	setcycle 110 size small
+	setcycle 111 stimulus "8_2_mult_true.jpg"
+	setcycle 111 SOAcondition negative
+	setcycle 111 operation mult
+	setcycle 111 truth true
+	setcycle 111 size small
+	setcycle 112 stimulus "8_4_add_FI.jpg"
+	setcycle 112 SOAcondition negative
+	setcycle 112 operation add
+	setcycle 112 truth false
+	setcycle 112 size large
+	setcycle 113 stimulus "8_4_add_FNI.jpg"
+	setcycle 113 SOAcondition negative
+	setcycle 113 operation add
+	setcycle 113 truth false
+	setcycle 113 size large
+	setcycle 114 stimulus "8_4_add_true.jpg"
+	setcycle 114 SOAcondition negative
+	setcycle 114 operation add
+	setcycle 114 truth true
+	setcycle 114 size large
+	setcycle 115 stimulus "8_4_add_true.jpg"
+	setcycle 115 SOAcondition negative
+	setcycle 115 operation add
+	setcycle 115 truth true
+	setcycle 115 size large
+	setcycle 116 stimulus "8_4_mult_FI.jpg"
+	setcycle 116 SOAcondition negative
+	setcycle 116 operation mult
+	setcycle 116 truth false
+	setcycle 116 size large
+	setcycle 117 stimulus "8_4_mult_FNI.jpg"
+	setcycle 117 SOAcondition negative
+	setcycle 117 operation mult
+	setcycle 117 truth false
+	setcycle 117 size large
+	setcycle 118 stimulus "8_4_mult_true.jpg"
+	setcycle 118 SOAcondition negative
+	setcycle 118 operation mult
+	setcycle 118 truth true
+	setcycle 118 size large
+	setcycle 119 stimulus "8_4_mult_true.jpg"
+	setcycle 119 SOAcondition negative
+	setcycle 119 operation mult
+	setcycle 119 truth true
+	setcycle 119 size large
+	setcycle 120 stimulus "9_7_add_FI.jpg"
+	setcycle 120 SOAcondition negative
+	setcycle 120 operation add
+	setcycle 120 truth false
+	setcycle 120 size large
+	setcycle 121 stimulus "9_7_add_FNI.jpg"
+	setcycle 121 SOAcondition negative
+	setcycle 121 operation add
+	setcycle 121 truth false
+	setcycle 121 size large
+	setcycle 122 stimulus "9_7_add_true.jpg"
+	setcycle 122 SOAcondition negative
+	setcycle 122 operation add
+	setcycle 122 truth true
+	setcycle 122 size large
+	setcycle 123 stimulus "9_7_add_true.jpg"
+	setcycle 123 SOAcondition negative
+	setcycle 123 operation add
+	setcycle 123 truth true
+	setcycle 123 size large
+	setcycle 124 stimulus "9_7_mult_FI.jpg"
+	setcycle 124 SOAcondition negative
+	setcycle 124 operation mult
+	setcycle 124 truth false
+	setcycle 124 size large
+	setcycle 125 stimulus "9_7_mult_FNI.jpg"
+	setcycle 125 SOAcondition negative
+	setcycle 125 operation mult
+	setcycle 125 truth false
+	setcycle 125 size large
+	setcycle 126 stimulus "9_7_mult_true.jpg"
+	setcycle 126 SOAcondition negative
+	setcycle 126 operation mult
+	setcycle 126 truth true
+	setcycle 126 size large
+	setcycle 127 stimulus "9_7_mult_true.jpg"
+	setcycle 127 SOAcondition negative
+	setcycle 127 operation mult
+	setcycle 127 truth true
+	setcycle 127 size large
+	run block1_sequence
+
+define loop block_2
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item block2_sequence
+	set description "Repeatedly runs another item"
+	set cycles 128
+	set continuous no
+	set column_order "stimulus;truth;SOAcondition;operation;size"
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 stimulus "2_7_add_FI.jpg"
+	setcycle 0 SOAcondition neutral
+	setcycle 0 operation add
+	setcycle 0 truth false
+	setcycle 0 size small
+	setcycle 1 stimulus "2_7_add_FNI.jpg"
+	setcycle 1 SOAcondition neutral
+	setcycle 1 operation add
+	setcycle 1 truth false
+	setcycle 1 size small
+	setcycle 2 stimulus "2_7_add_true.jpg"
+	setcycle 2 SOAcondition neutral
+	setcycle 2 operation add
+	setcycle 2 truth true
+	setcycle 2 size small
+	setcycle 3 stimulus "2_7_add_true.jpg"
+	setcycle 3 SOAcondition neutral
+	setcycle 3 operation add
+	setcycle 3 truth true
+	setcycle 3 size small
+	setcycle 4 stimulus "2_7_mult_FI.jpg"
+	setcycle 4 SOAcondition neutral
+	setcycle 4 operation mult
+	setcycle 4 truth false
+	setcycle 4 size small
+	setcycle 5 stimulus "2_7_mult_FNI.jpg"
+	setcycle 5 SOAcondition neutral
+	setcycle 5 operation mult
+	setcycle 5 truth false
+	setcycle 5 size small
+	setcycle 6 stimulus "2_7_mult_true.jpg"
+	setcycle 6 SOAcondition neutral
+	setcycle 6 operation mult
+	setcycle 6 truth true
+	setcycle 6 size small
+	setcycle 7 stimulus "2_7_mult_true.jpg"
+	setcycle 7 SOAcondition neutral
+	setcycle 7 operation mult
+	setcycle 7 truth true
+	setcycle 7 size small
+	setcycle 8 stimulus "3_6_add_FI.jpg"
+	setcycle 8 SOAcondition neutral
+	setcycle 8 operation add
+	setcycle 8 truth false
+	setcycle 8 size small
+	setcycle 9 stimulus "3_6_add_FNI.jpg"
+	setcycle 9 SOAcondition neutral
+	setcycle 9 operation add
+	setcycle 9 truth false
+	setcycle 9 size small
+	setcycle 10 stimulus "3_6_add_true.jpg"
+	setcycle 10 SOAcondition neutral
+	setcycle 10 operation add
+	setcycle 10 truth true
+	setcycle 10 size small
+	setcycle 11 stimulus "3_6_add_true.jpg"
+	setcycle 11 SOAcondition neutral
+	setcycle 11 operation add
+	setcycle 11 truth true
+	setcycle 11 size small
+	setcycle 12 stimulus "3_6_mult_FI.jpg"
+	setcycle 12 SOAcondition neutral
+	setcycle 12 operation mult
+	setcycle 12 truth false
+	setcycle 12 size small
+	setcycle 13 stimulus "3_6_mult_FNI.jpg"
+	setcycle 13 SOAcondition neutral
+	setcycle 13 operation mult
+	setcycle 13 truth false
+	setcycle 13 size small
+	setcycle 14 stimulus "3_6_mult_true.jpg"
+	setcycle 14 SOAcondition neutral
+	setcycle 14 operation mult
+	setcycle 14 truth true
+	setcycle 14 size small
+	setcycle 15 stimulus "3_6_mult_true.jpg"
+	setcycle 15 SOAcondition neutral
+	setcycle 15 operation mult
+	setcycle 15 truth true
+	setcycle 15 size small
+	setcycle 16 stimulus "4_9_add_FI.jpg"
+	setcycle 16 SOAcondition neutral
+	setcycle 16 operation add
+	setcycle 16 truth false
+	setcycle 16 size large
+	setcycle 17 stimulus "4_9_add_FNI.jpg"
+	setcycle 17 SOAcondition neutral
+	setcycle 17 operation add
+	setcycle 17 truth false
+	setcycle 17 size large
+	setcycle 18 stimulus "4_9_add_true.jpg"
+	setcycle 18 SOAcondition neutral
+	setcycle 18 operation add
+	setcycle 18 truth true
+	setcycle 18 size large
+	setcycle 19 stimulus "4_9_add_true.jpg"
+	setcycle 19 SOAcondition neutral
+	setcycle 19 operation add
+	setcycle 19 truth true
+	setcycle 19 size large
+	setcycle 20 stimulus "4_9_mult_FI.jpg"
+	setcycle 20 SOAcondition neutral
+	setcycle 20 operation mult
+	setcycle 20 truth false
+	setcycle 20 size large
+	setcycle 21 stimulus "4_9_mult_FNI.jpg"
+	setcycle 21 SOAcondition neutral
+	setcycle 21 operation mult
+	setcycle 21 truth false
+	setcycle 21 size large
+	setcycle 22 stimulus "4_9_mult_true.jpg"
+	setcycle 22 SOAcondition neutral
+	setcycle 22 operation mult
+	setcycle 22 truth true
+	setcycle 22 size large
+	setcycle 23 stimulus "4_9_mult_true.jpg"
+	setcycle 23 SOAcondition neutral
+	setcycle 23 operation mult
+	setcycle 23 truth true
+	setcycle 23 size large
+	setcycle 24 stimulus "5_3_add_FI.jpg"
+	setcycle 24 SOAcondition neutral
+	setcycle 24 operation add
+	setcycle 24 truth false
+	setcycle 24 size small
+	setcycle 25 stimulus "5_3_add_FNI.jpg"
+	setcycle 25 SOAcondition neutral
+	setcycle 25 operation add
+	setcycle 25 truth false
+	setcycle 25 size small
+	setcycle 26 stimulus "5_3_add_true.jpg"
+	setcycle 26 SOAcondition neutral
+	setcycle 26 operation add
+	setcycle 26 truth true
+	setcycle 26 size small
+	setcycle 27 stimulus "5_3_add_true.jpg"
+	setcycle 27 SOAcondition neutral
+	setcycle 27 operation add
+	setcycle 27 truth true
+	setcycle 27 size small
+	setcycle 28 stimulus "5_3_mult_FI.jpg"
+	setcycle 28 SOAcondition neutral
+	setcycle 28 operation mult
+	setcycle 28 truth false
+	setcycle 28 size small
+	setcycle 29 stimulus "5_3_mult_FNI.jpg"
+	setcycle 29 SOAcondition neutral
+	setcycle 29 operation mult
+	setcycle 29 truth false
+	setcycle 29 size small
+	setcycle 30 stimulus "5_3_mult_true.jpg"
+	setcycle 30 SOAcondition neutral
+	setcycle 30 operation mult
+	setcycle 30 truth true
+	setcycle 30 size small
+	setcycle 31 stimulus "5_3_mult_true.jpg"
+	setcycle 31 SOAcondition neutral
+	setcycle 31 operation mult
+	setcycle 31 truth true
+	setcycle 31 size small
+	setcycle 32 stimulus "6_8_add_FI.jpg"
+	setcycle 32 SOAcondition neutral
+	setcycle 32 operation add
+	setcycle 32 truth false
+	setcycle 32 size large
+	setcycle 33 stimulus "6_8_add_FNI.jpg"
+	setcycle 33 SOAcondition neutral
+	setcycle 33 operation add
+	setcycle 33 truth false
+	setcycle 33 size large
+	setcycle 34 stimulus "6_8_add_true.jpg"
+	setcycle 34 SOAcondition neutral
+	setcycle 34 operation add
+	setcycle 34 truth true
+	setcycle 34 size large
+	setcycle 35 stimulus "6_8_add_true.jpg"
+	setcycle 35 SOAcondition neutral
+	setcycle 35 operation add
+	setcycle 35 truth true
+	setcycle 35 size large
+	setcycle 36 stimulus "6_8_mult_FI.jpg"
+	setcycle 36 SOAcondition neutral
+	setcycle 36 operation mult
+	setcycle 36 truth false
+	setcycle 36 size large
+	setcycle 37 stimulus "6_8_mult_FNI.jpg"
+	setcycle 37 SOAcondition neutral
+	setcycle 37 operation mult
+	setcycle 37 truth false
+	setcycle 37 size large
+	setcycle 38 stimulus "6_8_mult_true.jpg"
+	setcycle 38 SOAcondition neutral
+	setcycle 38 operation mult
+	setcycle 38 truth true
+	setcycle 38 size large
+	setcycle 39 stimulus "6_8_mult_true.jpg"
+	setcycle 39 SOAcondition neutral
+	setcycle 39 operation mult
+	setcycle 39 truth true
+	setcycle 39 size large
+	setcycle 40 stimulus "8_2_add_FI.jpg"
+	setcycle 40 SOAcondition neutral
+	setcycle 40 operation add
+	setcycle 40 truth false
+	setcycle 40 size small
+	setcycle 41 stimulus "8_2_add_FNI.jpg"
+	setcycle 41 SOAcondition neutral
+	setcycle 41 operation add
+	setcycle 41 truth false
+	setcycle 41 size small
+	setcycle 42 stimulus "8_2_add_true.jpg"
+	setcycle 42 SOAcondition neutral
+	setcycle 42 operation add
+	setcycle 42 truth true
+	setcycle 42 size small
+	setcycle 43 stimulus "8_2_add_true.jpg"
+	setcycle 43 SOAcondition neutral
+	setcycle 43 operation add
+	setcycle 43 truth true
+	setcycle 43 size small
+	setcycle 44 stimulus "8_2_mult_FI.jpg"
+	setcycle 44 SOAcondition neutral
+	setcycle 44 operation mult
+	setcycle 44 truth false
+	setcycle 44 size small
+	setcycle 45 stimulus "8_2_mult_FNI.jpg"
+	setcycle 45 SOAcondition neutral
+	setcycle 45 operation mult
+	setcycle 45 truth false
+	setcycle 45 size small
+	setcycle 46 stimulus "8_2_mult_true.jpg"
+	setcycle 46 SOAcondition neutral
+	setcycle 46 operation mult
+	setcycle 46 truth true
+	setcycle 46 size small
+	setcycle 47 stimulus "8_2_mult_true.jpg"
+	setcycle 47 SOAcondition neutral
+	setcycle 47 operation mult
+	setcycle 47 truth true
+	setcycle 47 size small
+	setcycle 48 stimulus "8_4_add_FI.jpg"
+	setcycle 48 SOAcondition neutral
+	setcycle 48 operation add
+	setcycle 48 truth false
+	setcycle 48 size large
+	setcycle 49 stimulus "8_4_add_FNI.jpg"
+	setcycle 49 SOAcondition neutral
+	setcycle 49 operation add
+	setcycle 49 truth false
+	setcycle 49 size large
+	setcycle 50 stimulus "8_4_add_true.jpg"
+	setcycle 50 SOAcondition neutral
+	setcycle 50 operation add
+	setcycle 50 truth true
+	setcycle 50 size large
+	setcycle 51 stimulus "8_4_add_true.jpg"
+	setcycle 51 SOAcondition neutral
+	setcycle 51 operation add
+	setcycle 51 truth true
+	setcycle 51 size large
+	setcycle 52 stimulus "8_4_mult_FI.jpg"
+	setcycle 52 SOAcondition neutral
+	setcycle 52 operation mult
+	setcycle 52 truth false
+	setcycle 52 size large
+	setcycle 53 stimulus "8_4_mult_FNI.jpg"
+	setcycle 53 SOAcondition neutral
+	setcycle 53 operation mult
+	setcycle 53 truth false
+	setcycle 53 size large
+	setcycle 54 stimulus "8_4_mult_true.jpg"
+	setcycle 54 SOAcondition neutral
+	setcycle 54 operation mult
+	setcycle 54 truth true
+	setcycle 54 size large
+	setcycle 55 stimulus "8_4_mult_true.jpg"
+	setcycle 55 SOAcondition neutral
+	setcycle 55 operation mult
+	setcycle 55 truth true
+	setcycle 55 size large
+	setcycle 56 stimulus "9_7_add_FI.jpg"
+	setcycle 56 SOAcondition neutral
+	setcycle 56 operation add
+	setcycle 56 truth false
+	setcycle 56 size large
+	setcycle 57 stimulus "9_7_add_FNI.jpg"
+	setcycle 57 SOAcondition neutral
+	setcycle 57 operation add
+	setcycle 57 truth false
+	setcycle 57 size large
+	setcycle 58 stimulus "9_7_add_true.jpg"
+	setcycle 58 SOAcondition neutral
+	setcycle 58 operation add
+	setcycle 58 truth true
+	setcycle 58 size large
+	setcycle 59 stimulus "9_7_add_true.jpg"
+	setcycle 59 SOAcondition neutral
+	setcycle 59 operation add
+	setcycle 59 truth true
+	setcycle 59 size large
+	setcycle 60 stimulus "9_7_mult_FI.jpg"
+	setcycle 60 SOAcondition neutral
+	setcycle 60 operation mult
+	setcycle 60 truth false
+	setcycle 60 size large
+	setcycle 61 stimulus "9_7_mult_FNI.jpg"
+	setcycle 61 SOAcondition neutral
+	setcycle 61 operation mult
+	setcycle 61 truth false
+	setcycle 61 size large
+	setcycle 62 stimulus "9_7_mult_true.jpg"
+	setcycle 62 SOAcondition neutral
+	setcycle 62 operation mult
+	setcycle 62 truth true
+	setcycle 62 size large
+	setcycle 63 stimulus "9_7_mult_true.jpg"
+	setcycle 63 SOAcondition neutral
+	setcycle 63 operation mult
+	setcycle 63 truth true
+	setcycle 63 size large
+	setcycle 64 stimulus "2_7_add_FI.jpg"
+	setcycle 64 SOAcondition negative
+	setcycle 64 operation add
+	setcycle 64 truth false
+	setcycle 64 size small
+	setcycle 65 stimulus "2_7_add_FNI.jpg"
+	setcycle 65 SOAcondition negative
+	setcycle 65 operation add
+	setcycle 65 truth false
+	setcycle 65 size small
+	setcycle 66 stimulus "2_7_add_true.jpg"
+	setcycle 66 SOAcondition negative
+	setcycle 66 operation add
+	setcycle 66 truth true
+	setcycle 66 size small
+	setcycle 67 stimulus "2_7_add_true.jpg"
+	setcycle 67 SOAcondition negative
+	setcycle 67 operation add
+	setcycle 67 truth true
+	setcycle 67 size small
+	setcycle 68 stimulus "2_7_mult_FI.jpg"
+	setcycle 68 SOAcondition negative
+	setcycle 68 operation mult
+	setcycle 68 truth false
+	setcycle 68 size small
+	setcycle 69 stimulus "2_7_mult_FNI.jpg"
+	setcycle 69 SOAcondition negative
+	setcycle 69 operation mult
+	setcycle 69 truth false
+	setcycle 69 size small
+	setcycle 70 stimulus "2_7_mult_true.jpg"
+	setcycle 70 SOAcondition negative
+	setcycle 70 operation mult
+	setcycle 70 truth true
+	setcycle 70 size small
+	setcycle 71 stimulus "2_7_mult_true.jpg"
+	setcycle 71 SOAcondition negative
+	setcycle 71 operation mult
+	setcycle 71 truth true
+	setcycle 71 size small
+	setcycle 72 stimulus "3_6_add_FI.jpg"
+	setcycle 72 SOAcondition negative
+	setcycle 72 operation add
+	setcycle 72 truth false
+	setcycle 72 size small
+	setcycle 73 stimulus "3_6_add_FNI.jpg"
+	setcycle 73 SOAcondition negative
+	setcycle 73 operation add
+	setcycle 73 truth false
+	setcycle 73 size small
+	setcycle 74 stimulus "3_6_add_true.jpg"
+	setcycle 74 SOAcondition negative
+	setcycle 74 operation add
+	setcycle 74 truth true
+	setcycle 74 size small
+	setcycle 75 stimulus "3_6_add_true.jpg"
+	setcycle 75 SOAcondition negative
+	setcycle 75 operation add
+	setcycle 75 truth true
+	setcycle 75 size small
+	setcycle 76 stimulus "3_6_mult_FI.jpg"
+	setcycle 76 SOAcondition negative
+	setcycle 76 operation mult
+	setcycle 76 truth false
+	setcycle 76 size small
+	setcycle 77 stimulus "3_6_mult_FNI.jpg"
+	setcycle 77 SOAcondition negative
+	setcycle 77 operation mult
+	setcycle 77 truth false
+	setcycle 77 size small
+	setcycle 78 stimulus "3_6_mult_true.jpg"
+	setcycle 78 SOAcondition negative
+	setcycle 78 operation mult
+	setcycle 78 truth true
+	setcycle 78 size small
+	setcycle 79 stimulus "3_6_mult_true.jpg"
+	setcycle 79 SOAcondition negative
+	setcycle 79 operation mult
+	setcycle 79 truth true
+	setcycle 79 size small
+	setcycle 80 stimulus "4_9_add_FI.jpg"
+	setcycle 80 SOAcondition negative
+	setcycle 80 operation add
+	setcycle 80 truth false
+	setcycle 80 size large
+	setcycle 81 stimulus "4_9_add_FNI.jpg"
+	setcycle 81 SOAcondition negative
+	setcycle 81 operation add
+	setcycle 81 truth false
+	setcycle 81 size large
+	setcycle 82 stimulus "4_9_add_true.jpg"
+	setcycle 82 SOAcondition negative
+	setcycle 82 operation add
+	setcycle 82 truth true
+	setcycle 82 size large
+	setcycle 83 stimulus "4_9_add_true.jpg"
+	setcycle 83 SOAcondition negative
+	setcycle 83 operation add
+	setcycle 83 truth true
+	setcycle 83 size large
+	setcycle 84 stimulus "4_9_mult_FI.jpg"
+	setcycle 84 SOAcondition negative
+	setcycle 84 operation mult
+	setcycle 84 truth false
+	setcycle 84 size large
+	setcycle 85 stimulus "4_9_mult_FNI.jpg"
+	setcycle 85 SOAcondition negative
+	setcycle 85 operation mult
+	setcycle 85 truth false
+	setcycle 85 size large
+	setcycle 86 stimulus "4_9_mult_true.jpg"
+	setcycle 86 SOAcondition negative
+	setcycle 86 operation mult
+	setcycle 86 truth true
+	setcycle 86 size large
+	setcycle 87 stimulus "4_9_mult_true.jpg"
+	setcycle 87 SOAcondition negative
+	setcycle 87 operation mult
+	setcycle 87 truth true
+	setcycle 87 size large
+	setcycle 88 stimulus "5_3_add_FI.jpg"
+	setcycle 88 SOAcondition negative
+	setcycle 88 operation add
+	setcycle 88 truth false
+	setcycle 88 size small
+	setcycle 89 stimulus "5_3_add_FNI.jpg"
+	setcycle 89 SOAcondition negative
+	setcycle 89 operation add
+	setcycle 89 truth false
+	setcycle 89 size small
+	setcycle 90 stimulus "5_3_add_true.jpg"
+	setcycle 90 SOAcondition negative
+	setcycle 90 operation add
+	setcycle 90 truth true
+	setcycle 90 size small
+	setcycle 91 stimulus "5_3_add_true.jpg"
+	setcycle 91 SOAcondition negative
+	setcycle 91 operation add
+	setcycle 91 truth true
+	setcycle 91 size small
+	setcycle 92 stimulus "5_3_mult_FI.jpg"
+	setcycle 92 SOAcondition negative
+	setcycle 92 operation mult
+	setcycle 92 truth false
+	setcycle 92 size small
+	setcycle 93 stimulus "5_3_mult_FNI.jpg"
+	setcycle 93 SOAcondition negative
+	setcycle 93 operation mult
+	setcycle 93 truth false
+	setcycle 93 size small
+	setcycle 94 stimulus "5_3_mult_true.jpg"
+	setcycle 94 SOAcondition negative
+	setcycle 94 operation mult
+	setcycle 94 truth true
+	setcycle 94 size small
+	setcycle 95 stimulus "5_3_mult_true.jpg"
+	setcycle 95 SOAcondition negative
+	setcycle 95 operation mult
+	setcycle 95 truth true
+	setcycle 95 size small
+	setcycle 96 stimulus "6_8_add_FI.jpg"
+	setcycle 96 SOAcondition negative
+	setcycle 96 operation add
+	setcycle 96 truth false
+	setcycle 96 size large
+	setcycle 97 stimulus "6_8_add_FNI.jpg"
+	setcycle 97 SOAcondition negative
+	setcycle 97 operation add
+	setcycle 97 truth false
+	setcycle 97 size large
+	setcycle 98 stimulus "6_8_add_true.jpg"
+	setcycle 98 SOAcondition negative
+	setcycle 98 operation add
+	setcycle 98 truth true
+	setcycle 98 size large
+	setcycle 99 stimulus "6_8_add_true.jpg"
+	setcycle 99 SOAcondition negative
+	setcycle 99 operation add
+	setcycle 99 truth true
+	setcycle 99 size large
+	setcycle 100 stimulus "6_8_mult_FI.jpg"
+	setcycle 100 SOAcondition negative
+	setcycle 100 operation mult
+	setcycle 100 truth false
+	setcycle 100 size large
+	setcycle 101 stimulus "6_8_mult_FNI.jpg"
+	setcycle 101 SOAcondition negative
+	setcycle 101 operation mult
+	setcycle 101 truth false
+	setcycle 101 size large
+	setcycle 102 stimulus "6_8_mult_true.jpg"
+	setcycle 102 SOAcondition negative
+	setcycle 102 operation mult
+	setcycle 102 truth true
+	setcycle 102 size large
+	setcycle 103 stimulus "6_8_mult_true.jpg"
+	setcycle 103 SOAcondition negative
+	setcycle 103 operation mult
+	setcycle 103 truth true
+	setcycle 103 size large
+	setcycle 104 stimulus "8_2_add_FI.jpg"
+	setcycle 104 SOAcondition negative
+	setcycle 104 operation add
+	setcycle 104 truth false
+	setcycle 104 size small
+	setcycle 105 stimulus "8_2_add_FNI.jpg"
+	setcycle 105 SOAcondition negative
+	setcycle 105 operation add
+	setcycle 105 truth false
+	setcycle 105 size small
+	setcycle 106 stimulus "8_2_add_true.jpg"
+	setcycle 106 SOAcondition negative
+	setcycle 106 operation add
+	setcycle 106 truth true
+	setcycle 106 size small
+	setcycle 107 stimulus "8_2_add_true.jpg"
+	setcycle 107 SOAcondition negative
+	setcycle 107 operation add
+	setcycle 107 truth true
+	setcycle 107 size small
+	setcycle 108 stimulus "8_2_mult_FI.jpg"
+	setcycle 108 SOAcondition negative
+	setcycle 108 operation mult
+	setcycle 108 truth false
+	setcycle 108 size small
+	setcycle 109 stimulus "8_2_mult_FNI.jpg"
+	setcycle 109 SOAcondition negative
+	setcycle 109 operation mult
+	setcycle 109 truth false
+	setcycle 109 size small
+	setcycle 110 stimulus "8_2_mult_true.jpg"
+	setcycle 110 SOAcondition negative
+	setcycle 110 operation mult
+	setcycle 110 truth true
+	setcycle 110 size small
+	setcycle 111 stimulus "8_2_mult_true.jpg"
+	setcycle 111 SOAcondition negative
+	setcycle 111 operation mult
+	setcycle 111 truth true
+	setcycle 111 size small
+	setcycle 112 stimulus "8_4_add_FI.jpg"
+	setcycle 112 SOAcondition negative
+	setcycle 112 operation add
+	setcycle 112 truth false
+	setcycle 112 size large
+	setcycle 113 stimulus "8_4_add_FNI.jpg"
+	setcycle 113 SOAcondition negative
+	setcycle 113 operation add
+	setcycle 113 truth false
+	setcycle 113 size large
+	setcycle 114 stimulus "8_4_add_true.jpg"
+	setcycle 114 SOAcondition negative
+	setcycle 114 operation add
+	setcycle 114 truth true
+	setcycle 114 size large
+	setcycle 115 stimulus "8_4_add_true.jpg"
+	setcycle 115 SOAcondition negative
+	setcycle 115 operation add
+	setcycle 115 truth true
+	setcycle 115 size large
+	setcycle 116 stimulus "8_4_mult_FI.jpg"
+	setcycle 116 SOAcondition negative
+	setcycle 116 operation mult
+	setcycle 116 truth false
+	setcycle 116 size large
+	setcycle 117 stimulus "8_4_mult_FNI.jpg"
+	setcycle 117 SOAcondition negative
+	setcycle 117 operation mult
+	setcycle 117 truth false
+	setcycle 117 size large
+	setcycle 118 stimulus "8_4_mult_true.jpg"
+	setcycle 118 SOAcondition negative
+	setcycle 118 operation mult
+	setcycle 118 truth true
+	setcycle 118 size large
+	setcycle 119 stimulus "8_4_mult_true.jpg"
+	setcycle 119 SOAcondition negative
+	setcycle 119 operation mult
+	setcycle 119 truth true
+	setcycle 119 size large
+	setcycle 120 stimulus "9_7_add_FI.jpg"
+	setcycle 120 SOAcondition negative
+	setcycle 120 operation add
+	setcycle 120 truth false
+	setcycle 120 size large
+	setcycle 121 stimulus "9_7_add_FNI.jpg"
+	setcycle 121 SOAcondition negative
+	setcycle 121 operation add
+	setcycle 121 truth false
+	setcycle 121 size large
+	setcycle 122 stimulus "9_7_add_true.jpg"
+	setcycle 122 SOAcondition negative
+	setcycle 122 operation add
+	setcycle 122 truth true
+	setcycle 122 size large
+	setcycle 123 stimulus "9_7_add_true.jpg"
+	setcycle 123 SOAcondition negative
+	setcycle 123 operation add
+	setcycle 123 truth true
+	setcycle 123 size large
+	setcycle 124 stimulus "9_7_mult_FI.jpg"
+	setcycle 124 SOAcondition negative
+	setcycle 124 operation mult
+	setcycle 124 truth false
+	setcycle 124 size large
+	setcycle 125 stimulus "9_7_mult_FNI.jpg"
+	setcycle 125 SOAcondition negative
+	setcycle 125 operation mult
+	setcycle 125 truth false
+	setcycle 125 size large
+	setcycle 126 stimulus "9_7_mult_true.jpg"
+	setcycle 126 SOAcondition negative
+	setcycle 126 operation mult
+	setcycle 126 truth true
+	setcycle 126 size large
+	setcycle 127 stimulus "9_7_mult_true.jpg"
+	setcycle 127 SOAcondition negative
+	setcycle 127 operation mult
+	setcycle 127 truth true
+	setcycle 127 size large
+	run block2_sequence
+
+define sketchpad breakScreen
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=black font_bold=no font_family=mono font_italic=no font_size=24 html=yes show_if=always text="You may now take a short break.  <br /><br />When you ready to begin the second half,<br />put your fingers on the 'A' and 'L' keys and<br />press one of them to get started." x=32 y=-64 z_index=0
+
+define sequence experiment
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run setup_script always
+	run instruction1 always
+	run practiceBlock always
+	run instruction2 always
+	run block_1 always
+	run breakScreen always
+	run block_2 always
+	run finish always
+
+define sketchpad finish
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=black font_bold=no font_family=mono font_italic=no font_size=24 html=yes show_if=always text="You are now finished with the experiment. <br>  Thank you for your participation!" x=32 y=-64 z_index=0
+
+define sketchpad instruction1
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=0 color=black font_bold=no font_family=mono font_italic=no font_size=24 html=yes show_if=always text="In this experiment, you will be deciding whether<br />equations involving simple arithmetic are true <br />or false.<br /><br />At the beginning of each trial, an equation <br />will appear in the center of the screen.<br />You will then need to decide if the equation is TRUE or FALSE.<br /><br />If the equation is TRUE, press the 'A' key.<br />If the equation is FALSE, press the 'L' key.<br /><br />To get accustomed to the task, you will do 16 practice trials.<br /><br />When you are ready to begin, put your index fingers<br />on the 'A' and 'L' keys and press one of them to start." x=-352 y=-256 z_index=0
+
+define sketchpad instruction2
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=0 color=black font_bold=no font_family=mono font_italic=no font_size=24 html=yes show_if=always text="Now we are ready to begin the experiment.<br /><br />You will complete 256 trials, with a short break in the middle.<br /><br />Remember:<br /><br />TRUE = press 'A'<br />FALSE = press 'L'.<br /><br />Try to be as quick and accurate as possible.<br /><br />When you are ready to begin, put your fingers in position <br />on the 'A' and 'L' keys and press one of them to start." x=-352 y=-256 z_index=0
+
+define inline_script keyboard_script
+	set description "Executes Python code"
+	___run__
+	
+	# Fixation point
+	tick = fixation_length / 3
+	my_canvas.clear()
+	my_canvas.show()
+	exp.sleep(tick)
+	my_canvas.text('*')
+	my_canvas.show()
+	exp.sleep(tick)
+	my_canvas.clear()
+	my_canvas.show()
+	exp.sleep(tick)
+	
+	
+	
+	# Show the stimuli
+	
+	if SOAcondition=='neutral':
+		my_canvas.clear()
+		my_canvas.image(exp.get_file('stimuli/{0}'.format(stimulus)),True)
+		my_canvas.show()
+		
+	elif SOAcondition=='negative' and operation=='add':
+		my_canvas.clear()
+		my_canvas.image(exp.get_file('stimuli/addPreview.jpg'),True)
+		my_canvas.show()
+		exp.sleep(150)
+		my_canvas.clear()
+		my_canvas.image(exp.get_file('stimuli/{0}'.format(stimulus)),True)
+		my_canvas.show()
+	
+	elif SOAcondition=='negative' and operation=='mult':
+		my_canvas.clear()
+		my_canvas.image(exp.get_file('stimuli/multPreview.jpg'),True)
+		my_canvas.show()
+		exp.sleep(150)
+		my_canvas.clear()
+		my_canvas.image(exp.get_file('stimuli/{0}'.format(stimulus)),True)
+		my_canvas.show()
+		
+	# get keyboard response
+	start_time = clock.time()
+	key, time = my_keyboard.get_key(keylist=['a', 'l'])
+	rt = time - start_time
+	
+	# calculate accuracy
+	if truth == 'true':
+		correct_response = 'a'
+	else:
+		correct_response = 'l'
+	accuracy = int(key == correct_response)
+	
+	# Show a message if wrong answer
+	if (accuracy == 0):
+		my_canvas.clear()
+		my_canvas.text('X',color="red")
+		my_canvas.show()
+		exp.sleep(1000)
+	
+	# Standard Logging (the probe and code variables are taken care of automatically)
+	self.experiment.set("response", key)
+	self.experiment.set("accuracy", accuracy)
+	self.experiment.set("rt", rt)
+	__end__
+	___prepare__
+	# Constants
+	fixation_length = 900
+	
+	# Turn our OpenSesame variables into plain Python ones
+	stimulus = exp.get('stimulus')
+	truth = exp.get('truth')
+	SOAcondition = exp.get('SOAcondition')
+	operation = exp.get('operation')
+	__end__
+
+define logger logger
+	set use_quotes yes
+	set ignore_missing yes
+	set description "Logs experimental data"
+	set auto_log yes
+
+define loop practiceBlock
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item practice_sequence
+	set description "Repeatedly runs another item"
+	set cycles 16
+	set continuous no
+	set column_order "stimulus;truth;SOAcondition;operation"
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 stimulus "0_3_add_F.jpg"
+	setcycle 0 SOAcondition neutral
+	setcycle 0 operation add
+	setcycle 0 truth false
+	setcycle 1 stimulus "0_3_add_T.jpg"
+	setcycle 1 SOAcondition neutral
+	setcycle 1 operation add
+	setcycle 1 truth true
+	setcycle 2 stimulus "0_3_mult_F.jpg"
+	setcycle 2 SOAcondition neutral
+	setcycle 2 operation mult
+	setcycle 2 truth false
+	setcycle 3 stimulus "0_3_mult_T.jpg"
+	setcycle 3 SOAcondition neutral
+	setcycle 3 operation mult
+	setcycle 3 truth true
+	setcycle 4 stimulus "1_4_add_F.jpg"
+	setcycle 4 SOAcondition neutral
+	setcycle 4 operation add
+	setcycle 4 truth false
+	setcycle 5 stimulus "1_4_add_T.jpg"
+	setcycle 5 SOAcondition neutral
+	setcycle 5 operation add
+	setcycle 5 truth true
+	setcycle 6 stimulus "1_4_mult_F.jpg"
+	setcycle 6 SOAcondition neutral
+	setcycle 6 operation mult
+	setcycle 6 truth false
+	setcycle 7 stimulus "1_4_mult_T.jpg"
+	setcycle 7 SOAcondition neutral
+	setcycle 7 operation mult
+	setcycle 7 truth true
+	setcycle 8 stimulus "0_3_add_F.jpg"
+	setcycle 8 SOAcondition negative
+	setcycle 8 operation add
+	setcycle 8 truth false
+	setcycle 9 stimulus "0_3_add_T.jpg"
+	setcycle 9 SOAcondition negative
+	setcycle 9 operation add
+	setcycle 9 truth true
+	setcycle 10 stimulus "0_3_mult_F.jpg"
+	setcycle 10 SOAcondition negative
+	setcycle 10 operation mult
+	setcycle 10 truth false
+	setcycle 11 stimulus "0_3_mult_T.jpg"
+	setcycle 11 SOAcondition negative
+	setcycle 11 operation mult
+	setcycle 11 truth true
+	setcycle 12 stimulus "1_4_add_F.jpg"
+	setcycle 12 SOAcondition negative
+	setcycle 12 operation add
+	setcycle 12 truth false
+	setcycle 13 stimulus "1_4_add_T.jpg"
+	setcycle 13 SOAcondition negative
+	setcycle 13 operation add
+	setcycle 13 truth true
+	setcycle 14 stimulus "1_4_mult_F.jpg"
+	setcycle 14 SOAcondition negative
+	setcycle 14 operation mult
+	setcycle 14 truth false
+	setcycle 15 stimulus "1_4_mult_T.jpg"
+	setcycle 15 SOAcondition negative
+	setcycle 15 operation mult
+	setcycle 15 truth true
+	run practice_sequence
+
+define sequence practice_sequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run keyboard_script always
+	run logger always
+
+define inline_script setup_script
+	set description "Executes Python code"
+	___run__
+	# Create our input and output routines
+	from openexp.keyboard import keyboard
+	from openexp.canvas import canvas
+	my_keyboard = keyboard(exp)
+	my_canvas = canvas(exp)
+	# Declare them as global, so we can use them later on.
+	global my_keyboard, my_canvas
+	__end__
+	set _prepare ""
+
